@@ -86,7 +86,8 @@ func checkTimeSlot(ctx *cli.Context) error {
 	if strings.Contains(pageContent, "No time slots available") {
 		logrus.Info("Sorry, no time slots available")
 	} else {
-		logrus.Infof("The available time slot are %s", "test")
+		logrus.Infof("There are time slots available, please click following link")
+		logrus.Infof("https://www.migrationsverket.se/English/Contact-us/Book-an-appointment-before-you-visit-us.html")
 	}
 	return nil
 }
