@@ -83,7 +83,7 @@ func checkTimeSlot(ctx *cli.Context) error {
 	dataInBytes, err := ioutil.ReadAll(resp.Body)
 	pageContent := string(dataInBytes)
 	//logrus.Debug(pageContent)
-	if strings.Contains(pageContent, "No time slots available") {
+	if strings.Contains(pageContent, "there are no available time slots") {
 		logrus.Info("Sorry, no time slots available")
 	} else {
 		logrus.Infof("There are time slots available, please click following link")
